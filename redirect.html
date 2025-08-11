@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Redirect...</title>
+  <meta charset="UTF-8">
+  <title>กำลังเปลี่ยนเส้นทาง...</title>
 </head>
 <body>
-    <p>กำลังเปลี่ยนเส้นทาง...</p>
-    <script>
-        const destination = localStorage.getItem("qrDestination") || "https://google.com";
-        window.location.href = destination;
-    </script>
+  <p>กำลังเปลี่ยนเส้นทาง กรุณารอสักครู่...</p>
+  <script>
+    const url = localStorage.getItem("qrDestination");
+    if (url) {
+      window.location.href = url;
+    } else {
+      document.body.innerHTML = "<p>ยังไม่ได้ตั้งค่าปลายทาง</p>";
+    }
+  </script>
 </body>
 </html>
