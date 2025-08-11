@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>ตั้งค่าปลายทาง QR</title>
+  <meta charset="UTF-8">
+  <title>ตั้งค่าปลายทาง QR</title>
 </head>
 <body>
-    <h2>ตั้งค่าลิงก์ปลายทาง</h2>
-    <input type="text" id="newUrl" placeholder="https://example.com">
-    <button onclick="saveDestination()">บันทึก</button>
+  <h2>ตั้งค่าลิงก์ปลายทาง</h2>
+  <input type="text" id="newUrl" placeholder="https://example.com" style="width:300px;">
+  <button onclick="saveDestination()">บันทึก</button>
 
-    <script>
-        function saveDestination() {
-            const url = document.getElementById('newUrl').value;
-            if (!url) {
-                alert("กรุณากรอก URL");
-                return;
-            }
-            localStorage.setItem("qrDestination", url);
-            alert("บันทึกเรียบร้อย");
-        }
-    </script>
+  <script>
+    function saveDestination() {
+      const url = document.getElementById('newUrl').value.trim();
+      if (!url) {
+        alert("กรุณากรอก URL");
+        return;
+      }
+      localStorage.setItem("qrDestination", url);
+      alert("บันทึกเรียบร้อยแล้ว");
+    }
+  </script>
 </body>
 </html>
