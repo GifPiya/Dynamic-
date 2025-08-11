@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=">
+    <title>QR Redirect</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const destination = localStorage.getItem("qrDestination") || "https://example.com";
+            window.location.href = destination;
+        });
+    </script>
+</head>
+<body>
+    <p>กำลังพาไปยังปลายทาง...</p>
+</body>
+</html>
